@@ -22,7 +22,7 @@ def solve(matrix, f):
         A = np.dot(H, A)
         b = np.dot(H, b)
 
-    answ = np.array([0.0 for i in range(n)])
+    answ = np.zeros(n)
     for i in range(n-1, -1, -1):
         xi = b[i]
         for j in range(i+1, n):
