@@ -9,7 +9,7 @@ def solve(A, b, x, eps = 1e-8):
         for i in range(n):
             s1 = sum(A[i][j] * x_new[j] for j in range(i))
             s2 = sum(A[i][j] * x[j] for j in range(i + 1, n))
-            x_new[i] = (b[i] - s1 - s2) / A[i][iz]
+            x_new[i] = (b[i] - s1 - s2) / A[i][i]
         converge = np.linalg.norm(x_new - x) <= eps
         x = x_new
 
