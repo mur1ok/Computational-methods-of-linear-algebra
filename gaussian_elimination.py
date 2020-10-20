@@ -15,7 +15,7 @@ def solve(matrix):
         for j in range(i + 1, A.shape[0]):
             A[j] = A[j] - A[i]*A[j][i]
 
-    answ = np.array([0.0 for i in range(A.shape[0])])
+    answ = np.zeros(A.shape[0])
     for i in range(A.shape[0]-1, -1, -1):
         xi = A[i][A.shape[0]]
         for j in range(i+1, A.shape[0]):
