@@ -28,7 +28,7 @@ def solve(matrix):
     alpha = [-c[0]/b[0]]
     beta = [f[0]/b[0]]
 
-    answ = [0 for i in range(n)]
+    answ = np.zeros(n)
 
     for i in range(1,n-1):
         alpha.append(-c[i]/(a[i]*alpha[i - 1] + b[i]))
