@@ -1,7 +1,7 @@
 import numpy as np
 
 def get_eigenvalues(A):
-    temp = A
+    temp = A.copy()
     while(True):
         Q, R = np.linalg.qr(temp)
         temp = np.dot(R, Q)
